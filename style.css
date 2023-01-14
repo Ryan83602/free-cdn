@@ -1,0 +1,234 @@
+html, body{
+	min-height: 100%;
+	line-height:24px;
+	min-height:100vh;
+	background: #000;
+	color: #fff;
+}
+*{
+	margin:0;
+	padding:0;
+	font-size: 12px;
+	box-sizing: border-box;
+}
+ul{
+	list-style:none;
+}
+.hide{
+    display: none;
+}
+.lf{
+	float: left;
+}
+.lr{
+	float: right;
+}
+.red, .red a,.red a h5, .red a p{
+    color:#FF0000 !important;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.mr2 {
+	margin-right: 1rem;
+}
+.ml2 {
+	margin-left: 1rem;
+}
+
+
+
+.herder{
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+}
+.burger{
+	position:absolute;
+	z-index: 10;
+	right:25px;
+	top: 25px;
+	cursor: pointer;
+	transform: rotateY(0);	
+	transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.burger-patty{
+	width:28px;
+	height: 2px;
+	margin: 0 0 4px 0;
+	background: white;
+	transition:all 0.4s cubic-bezier(0.23, 1, 0.23, 1);
+}
+.burger-patty:last-child{
+	margin-bottom: 0;
+}
+
+.burger-close{
+	transform: rotate(180deg);
+}
+.burger-close .burger-patty:nth-child(1){
+    transform: rotate(45deg) translate(4px, 4px);
+}
+.burger-close .burger-patty:nth-child(2){
+	opacity: 0;
+}
+.burger-close .burger-patty:nth-child(3){
+	transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.menu{
+	position: fixed;
+	top:0;
+	width:100%;
+	visibility: hidden;
+}
+.menu-banner, .menu-list{
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-self:center;
+	float:left;
+	width:50%;
+	height:100vh;
+	overflow: hidden;
+}
+
+.menu-banner{
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	transform: translate3d(0, 100%, 0);
+	transition: all 0.4s cubic-bezier(0.23, 1, 0.23, 1);
+}
+.menu-list{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin:0;
+	padding:0;
+	background: deepskyblue;
+	transform: translate3d(0, -100%, 0);
+	transition: all 0.4s cubic-bezier(0.23, 1, 0.23, 1);
+}
+.menu-list .menu-item{
+	position:relative;
+	transform: translateX(50vw);
+	transition: all calc(0.4s + var(--i)*0.2s) 0.4s cubic-bezier(0.23, 1, 0.23, 1);
+}
+
+.menu-list .menu-item a{
+	font-size: 1.4em;
+	line-height: 3.6em;
+}
+.menu-list .menu-item:before{
+	position: absolute;
+	bottom:0;
+	left: calc(50% - 6px);
+	content: "";
+	display: block;
+	width:12px;
+	height:2px;
+	background: #fff;
+	transition: all 0.2s cubic-bezier(0.23, 1, 0.23, 1);
+}
+.menu-list .menu-item:hover:before{
+	width:100%;
+	left: 0;
+}
+
+
+
+.menu-action{
+	visibility: visible;
+}
+.menu-action .menu-banner{
+	transform: translate3d(0, 0, 0);
+}
+.menu-action .menu-list{
+	transform: translate3d(0, 0, 0);
+}
+.menu-action .menu-list .menu-item{
+	transform: translateX(0);
+}
+
+main{
+	/*background: url(../imgs/future.jpg);*/
+	background: #242424;
+	background-size: cover;
+	display: flex;
+	width:100%;
+	height:100vh;
+	align-items: center;
+	flex-wrap: wrap;
+	padding:0 3em;
+}
+main h2, main h3{
+	width:100%;
+	font-size:16px;
+}
+main h2{
+	font-size: 3em;
+	line-height: auto;
+	font-weight: bold;
+	margin-bottom: 0.6em;
+}
+main h3{
+	line-height:32px;
+}
+
+
+@media screen and (max-width:850px) {
+	main h2, main h3{
+		width: 100%;
+	}
+}
+
+.btn {
+    margin-bottom: 80px;
+}
+.btn {
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    text-transform: uppercase;
+    border-color: #fff;
+    border: 2px solid;
+    border-radius: 0;
+    padding: 12px 4vw;
+    background: transparent;
+    box-shadow: none;
+    position: relative;
+    z-index: 2;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background: transparent;
+    color: #000;
+    border-color: #222;
+    border: 2px solid #fff;
+    outline: none;
+    box-shadow: none;
+}
+.btn:hover .mask {
+    width: 100%;
+}
+
+.btn .mask {
+    background: #fff none repeat scroll 0 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: -1;
+    -moz-transition: all 0.9s cubic-bezier(0.2, 1, 0.25, 1) 0s;
+    -o-transition: all 0.9s cubic-bezier(0.2, 1, 0.25, 1) 0s;
+    -webkit-transition: all 0.9s cubic-bezier(0.2, 1, 0.25, 1) 0s;
+    transition: all 0.9s cubic-bezier(0.2, 1, 0.25, 1) 0s;
+}
