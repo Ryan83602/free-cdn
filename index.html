@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>已收录链接</title>
+  <link rel="stylesheet" href="https://cdn.moezz.cn/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+  <style>
+    a {
+      display: block;
+      color: black;
+    }
+    a:hover{
+        color: gray;
+    }
+    body {
+        /* Screen version */
+        font-family: "LXGW WenKai Screen", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+    <h1>注：以下链接均为公开加速链接，个人使用暂不公布</h1>
+    <h1>有问题联系管理员邮箱/QQ/微信 me@moezz.cn / 39907930 / Python_Ryan</h1>
+    <div id="show"></div>
+    <script>
+            re();
+            setInterval("re()", 1000);
+            function re(){
+            var t1=new Date("2022/11/1 17:30:59"); //格式正确不需要转换
+ 
+            var data=new Date();//获取当前时间
+            var times=data.getTime()-t1.getTime();//时间差的毫秒数
+
+            var days=parseInt(times/(24*1000*3600));//计算相差的天数
+            var leave=times%(24*3600*1000);//计算天数后剩余的毫秒数
+ 
+            var h=parseInt(leave/(3600*1000));//计算小时数
+ 
+            //计算分钟数
+            var h_leave=leave%(3600*1000);
+            var min=parseInt(h_leave/(60*1000));
+ 
+            //计算秒数
+            var min_leave=h_leave%(60*1000);
+            var sec=parseInt(min_leave/1000);
+            document.getElementById('show').innerHTML =`<h1>本CDN服务稳定运行${days}天${h}小时${min}分钟${sec}秒</h1>`;
+            }
+    </script>
+
+  <div class="jsdelivr">
+      <h1>jsdelivr镜像加速</h1>
+      <a href="https://jsd.moezz.cn/">https://jsd.moezz.cn/</a>
+      示例链接：<a href="https://jsd.moezz.cn/npm/jquery@3.6.3/dist/jquery.min.js">https://jsd.moezz.cn/npm/jquery@3.6.3/dist/jquery.min.js</a>
+      <br>注意:可能涉及滥用的用户请自觉使用Gcore CDN线路:jsd.cdnproxy.ryanteam.cc,把宝贵的大陆流量留给更需要的人,因为域名当月一超阀值所有访问都会被重定向到Gcore CDN!另外,海外速度不会慢的!<a href="https://jsd.cdnproxy.ryanteam.cc/gh/Ryan83602/fileorg@main/music/Tie%CC%88sto%20-%20The%20Business%20(Explicit).mp3">测试资源</a>
+  </div>
+
+  <div class="unpkg">
+      <h1>unpkg镜像加速</h1>
+      <a href="https://unpkg.moezz.cn/">https://unpkg.moezz.cn/</a>
+      示例链接：<a href="https://unpkg.moezz.cn/jquery@3.6.3/dist/jquery.min.js">https://unpkg.moezz.cn/jquery@3.6.3/dist/jquery.min.js</a>
+      <br>注意:可能涉及滥用的用户请自觉使用Gcore CDN线路:unpkg.cdnproxy.ryanteam.cc,把宝贵的大陆流量留给更需要的人,因为域名当月一超阀值所有访问都会被重定向到Gcore CDN!另外,海外速度不会慢的!<a href="https://jsd.cdnproxy.ryanteam.cc/gh/Ryan83602/fileorg@main/music/Tie%CC%88sto%20-%20The%20Business%20(Explicit).mp3">测试资源</a>
+  </div>
+  
+    <div class="cdnjs">
+      <h1>cdnjs镜像加速</h1>
+      <a href="https://cdnjs.moezz.cn/">https://cdnjs.moezz.cn/</a>
+      示例链接：<a href="https://cdnjs.moezz.cn/ajax/libs/jquery/3.6.3/jquery.min.js">https://cdnjs.moezz.cn/ajax/libs/jquery/3.6.3/jquery.min.js</a>
+      <br>注意:可能涉及滥用的用户请自觉使用Gcore CDN线路:cdnjs.cdnproxy.ryanteam.cc,把宝贵的大陆流量留给更需要的人,因为域名当月一超阀值所有访问都会被重定向到Gcore CDN!另外,海外速度不会慢的!<a href="https://jsd.cdnproxy.ryanteam.cc/gh/Ryan83602/fileorg@main/music/Tie%CC%88sto%20-%20The%20Business%20(Explicit).mp3">测试资源</a>
+  </div>
+  
+  <div class="rawgh">
+      <h1>raw.githubusercontent.com镜像加速</h1>
+      <a href="https://rawgh.moezz.cn/">https://rawgh.moezz.cn/</a>
+      示例链接：<a href="https://rawgh.moezz.cn/Ryan83602/fileorg/main/pj.js">https://rawgh.moezz.cn/Ryan83602/fileorg/main/pj.js</a>
+      <a style="color:red">注意,raw.githubusercontent.com镜像使用Gcore CDN进行加速,节点在境外(香港🇭🇰,德国🇩🇪,俄罗斯🇷🇺都有)因为这个CDN每个月免费1Tib,国内CDN流量费用我实在耗不起,请大家理解,毕竟公益难得,且用且珍惜!另外,为了加速,本CDN缓存365days!可以通过新建分支的方法拉取最新资源!</a>
+  </div>
+ 
+  <div class="handsome">
+    <h1>handsome</h1>
+    <a href="https://cdn.moezz.cn/handsome/8.2.1/">https://cdn.moezz.cn/handsome/8.2.1/</a>
+    <a href="https://cdn.moezz.cn/handsome/8.3.0/">https://cdn.moezz.cn/handsome/8.3.0</a>
+    <a href="https://cdn.moezz.cn/handsome/8.4.1/">https://cdn.moezz.cn/handsome/8.4.1/</a>
+    <a href="https://cdn.moezz.cn/handsome/9.0.0/">https://cdn.moezz.cn/handsome/9.0.0/</a>
+    <a href="https://cdn.moezz.cn/handsome/9.0.1/">https://cdn.moezz.cn/handsome/9.0.1/</a>
+    <a href="https://cdn.moezz.cn/handsome/9.0.2/">https://cdn.moezz.cn/handsome/9.0.2/</a>
+  </div>
+
+  <div class="HarmonySanc">
+      <h1>HarmonySanc</h1>
+      <a href="https://cdn.moezz.cn/Harmony/">Harmony字体加速CDN</a>
+      <a style="color:red">注意!参见<a href="https://www.moezz.cn/contents/28">本文</a>进行替换!将s1.hdslb.com/bfs/static/jinkela/long/font替换为cdn.moezz.cn/Harmony</a>
+  </div>
+  
+  <div class="HarmonySanc">
+      <h1>霞鹜文楷(本站同款)</h1>
+      <a href="https://cdn.moezz.cn/lxgw-wenkai-screen-webfont/">霞鹜文楷字体加速CDN</a>
+      替换方法:见<a href="https://www.moezz.cn/contents/44">本文</a>
+  </div>
+
+  <div class="FontLIbs">
+    <h1>FontLIbs</h1>
+    <a href="https://cdn.moezz.cn/FontLIbs/快乐灵影体.ttf">https://cdn.moezz.cn/FontLIbs/快乐灵影体.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/方正像素.ttf">https://cdn.moezz.cn/FontLIbs/方正像素.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/方正兰亭细黑.ttf">https://cdn.moezz.cn/FontLIbs/方正兰亭细黑.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/方正北魏楷书简体.ttf">https://cdn.moezz.cn/FontLIbs/方正北魏楷书简体.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/方正细俊黑简体.ttf">https://cdn.moezz.cn/FontLIbs/方正细俊黑简体.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/汉仪中楷简.ttf">https://cdn.moezz.cn/FontLIbs/汉仪中楷简.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/汉仪劲楷简.ttf">https://cdn.moezz.cn/FontLIbs/汉仪劲楷简.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/汉仪粗仿宋简.ttf">https://cdn.moezz.cn/FontLIbs/汉仪粗仿宋简.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/潮玩嬉戏体.ttf">https://cdn.moezz.cn/FontLIbs/潮玩嬉戏体.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/造字工房典黑超细体.ttf">https://cdn.moezz.cn/FontLIbs/造字工房典黑超细体.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/造字工房尚黑常规体.ttf">https://cdn.moezz.cn/FontLIbs/造字工房尚黑常规体.ttf</a>
+    <a href="https://cdn.moezz.cn/FontLIbs/造字工房悦圆.otf">https://cdn.moezz.cn/FontLIbs/造字工房悦圆.otf</a>
+  </div>
+    <hr>
+    <script>
+           var date = new Date();
+           var y=date.getFullYear();
+           document.write(`<a href="https://www.moezz.cn"><center>Copyright © Python_Ryan ${y}</center></a>`)
+    </script>
+    <center><a href="https://beian.miit.gov.cn">浙ICP备 2022035371号-1</a></center>
+    <center><a href="https://afdian.net/a/python-ryan">有财力?请赞助</a></center>
+    <hr>
+    <h2>这里评论区,加载不出来可能需要魔法,因基于Github的讨论</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="Ryan83602/free-cdn"
+        data-repo-id="R_kgDOIxWJ8A"
+        data-category="General"
+        data-category-id="DIC_kwDOIxWJ8M4CTk0R"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+</body>
+</html>
